@@ -9,7 +9,7 @@
 
 **A pixel-perfect, production-ready SaaS landing page built with modern web technologies**
 
-[Live Demo](#) • [Documentation](#-documentation) • [Report Bug](#) • [Request Feature](#)
+[Live Demo](https://stellar-takehome.vercel.app/) • [Documentation](#-documentation)
 
 </div>
 
@@ -77,7 +77,7 @@
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Core Technologies
 - **[React 18.3](https://react.dev/)** - Modern UI library with hooks and concurrent features
