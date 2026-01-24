@@ -284,7 +284,7 @@ Over 5 detailed documentation files covering every aspect of the project.
 
 ## 🔗 Repository Information
 
-**Repository**: [GitHub Link]  
+**Repository**: [https://github.com/riyaz-ahamed-07/cradle-dev-takehome](https://github.com/riyaz-ahamed-07/cradle-dev-takehome)  
 **Live Demo**: [Deployment Link]  
 **Documentation**: See `docs/` folder
 
