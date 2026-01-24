@@ -25,24 +25,28 @@ const FeatureCard = ({ title, subtitle, icon: Icon, children }) => (
 const BigFeaturesSection = () => {
     return (
         <section className="py-36 bg-white relative overflow-hidden font-sans">
-            {/* Top Grid Background */}
+            {/* Grid Background */}
             <div
-                className="hidden lg:block absolute inset-x-0 bottom-0 h-[70%] z-0 pointer-events-none opacity-20"
+                className="hidden lg:block absolute inset-0 z-0 bottom-0 h-[100%] pointer-events-none opacity-20"
                 style={{
                     backgroundImage: 'url(/images/grid-bg.png)',
                     backgroundSize: 'cover',
-                    backgroundPosition: 'center center',
-                    backgroundRepeat: 'no-repeat'
+                    backgroundPosition: 'center bottom',
+                    backgroundRepeat: 'no-repeat',
+                    maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
+                    WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
                 }}
             ></div>
-            {/* Bottom Grid Background */}
+            {/* Grid Background (Inverted) */}
             <div
-                className="hidden lg:block absolute inset-x-0 top-0 h-[70%] z-0 pointer-events-none opacity-20"
+                className="hidden lg:block absolute inset-0 z-0 bottom-0 h-[70%] pointer-events-none opacity-20"
                 style={{
                     backgroundImage: 'url(/images/grid-bg.png)',
                     backgroundSize: 'cover',
-                    backgroundPosition: 'center center',
+                    backgroundPosition: 'center bottom',
                     backgroundRepeat: 'no-repeat',
+                    maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
+                    WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
                     transform: 'scaleY(-1)'
                 }}
             ></div>
