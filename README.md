@@ -1,4 +1,4 @@
-# 🌟 Stellar - Modern SaaS Landing Page
+# Stellar – Frontend Take-Home Assignment
 
 <div align="center">
 
@@ -26,18 +26,16 @@
 - [Design Specifications](#-design-specifications)
 - [Performance](#-performance)
 - [Deployment](#-deployment)
-- [Contributing](#-contributing)
 - [License](#-license)
 
 ---
 
 ## 🎯 Overview
 
-**Stellar** is a modern, fully responsive SaaS landing page meticulously crafted to match Figma design specifications with pixel-perfect accuracy. Built as part of an internship assignment, this project demonstrates professional-grade frontend development practices, clean code architecture, and attention to detail.
+**Stellar** is a modern, fully responsive landing page meticulously crafted to match Figma design specifications with pixel-perfect accuracy. Built as part of an internship assignment, this project demonstrates professional-grade frontend development practices, clean code architecture, and attention to detail.
 
 ### Key Highlights
 
-✨ **Pixel-Perfect Implementation** - Strictly adheres to Figma design specifications  
 🎨 **Modern UI/UX** - Smooth animations, hover effects, and interactive elements  
 📱 **Fully Responsive** - Optimized for mobile, tablet, and desktop devices  
 ⚡ **Performance Optimized** - Fast load times and smooth interactions  
@@ -67,7 +65,7 @@
 - Split-screen layout with form and dashboard preview
 - OAuth integration buttons (Google, Twitter)
 - Email/password login form with validation
-- Interactive dashboard preview with sequential slide-in animations
+- Interactive dashboard preview
 - Responsive design for mobile devices
 
 ### 🎨 Additional Pages
@@ -88,13 +86,7 @@
 - **[React Router DOM 7.12](https://reactrouter.com/)** - Declarative routing for React applications
 - **[Framer Motion 12.27](https://www.framer.com/motion/)** - Production-ready animation library
 - **[Lucide React](https://lucide.dev/)** - Beautiful & consistent icon set
-- **[@splinetool/react-spline](https://spline.design/)** - 3D design integration (if applicable)
 - **[@fontsource/fustat](https://fontsource.org/)** - Self-hosted Fustat font family
-
-### Development Tools
-- **ESLint** - Code linting and quality checks
-- **PostCSS** - CSS transformations
-- **Autoprefixer** - Automatic vendor prefixing
 
 ---
 
@@ -144,61 +136,18 @@ Ensure you have the following installed:
 
 ```
 stellar/
-├── public/                      # Static assets
-│   ├── images/                  # Image assets
-│   ├── logos/                   # Company logos
-│   └── vite.svg                 # Vite logo
-│
+├── public/              # Static assets
 ├── src/
-│   ├── components/              # Reusable React components
-│   │   ├── BigFeaturesSection.jsx    # Large features showcase
-│   │   ├── Button.jsx                # Reusable button component
-│   │   ├── CTASection.jsx            # Call-to-action section
-│   │   ├── Contact.jsx               # Contact component
-│   │   ├── ContactForm.jsx           # Contact form
-│   │   ├── FeaturesSection.jsx       # Features grid
-│   │   ├── Footer.jsx                # Site footer
-│   │   ├── Hero.jsx                  # Hero section
-│   │   ├── Navbar.jsx                # Navigation bar
-│   │   ├── PricingCard.jsx           # Pricing tier card
-│   │   ├── SolutionSection.jsx       # Solutions showcase
-│   │   └── TrustSection.jsx          # Trust/logo section
-│   │
-│   ├── pages/                   # Page components
-│   │   ├── Home.jsx                  # Landing page
-│   │   ├── Pricing.jsx               # Pricing page
-│   │   ├── Login.jsx                 # Login page
-│   │   ├── About.jsx                 # About page
-│   │   ├── Contact.jsx               # Contact page
-│   │   ├── Blog.jsx                  # Blog page
-│   │   ├── Product.jsx               # Product page
-│   │   ├── Integration.jsx           # Integration page
-│   │   ├── IntegrationDetail.jsx     # Integration details
-│   │   ├── SignUp.jsx                # Sign up page
-│   │   ├── Templates.jsx             # Templates page
-│   │   └── NotFound.jsx              # 404 page
-│   │
-│   ├── hooks/                   # Custom React hooks
-│   ├── assets/                  # Asset files
-│   ├── App.jsx                  # Main app component with routing
-│   ├── App.css                  # App-specific styles
-│   ├── main.jsx                 # Application entry point
-│   └── index.css                # Global styles & Tailwind imports
-│
-├── index.html                   # HTML template
-├── tailwind.config.js           # Tailwind CSS configuration
-├── vite.config.js               # Vite configuration
-├── eslint.config.js             # ESLint configuration
-├── postcss.config.cjs           # PostCSS configuration
-├── package.json                 # Project dependencies
-├── .gitignore                   # Git ignore rules
-│
-└── docs/                        # Additional documentation
-    ├── ARCHITECTURE.md          # Architecture & design decisions
-    ├── DEPLOYMENT.md            # Deployment guide
-    ├── DEVELOPMENT.md           # Development workflow
-    ├── DESIGN_SYSTEM.md         # Design specifications
-    └── PERFORMANCE.md           # Performance optimizations
+│   ├── components/      # Reusable UI components
+│   ├── pages/           # Application pages
+│   ├── assets/          # Images & icons
+│   ├── App.jsx          # App routing
+│   └── main.jsx         # Entry point
+├── docs/                # Project documentation
+├── index.html
+├── tailwind.config.js
+├── vite.config.js
+└── package.json
 ```
 
 ---
@@ -242,13 +191,6 @@ Comprehensive documentation is available in the `docs/` directory:
 - **Body Text**: 16-18px, Regular (400)
 - **Small Text**: 14px, Regular (400)
 
-### Spacing System
-
-- **Base Unit**: 4px
-- **Common Spacing**: 8px, 16px, 24px, 32px, 48px, 64px, 96px, 128px
-- **Container Max Width**: 1280px
-- **Section Padding**: 64px (mobile), 96px (tablet), 128px (desktop)
-
 ### Responsive Breakpoints
 
 | Breakpoint | Width | Description |
@@ -291,36 +233,8 @@ npm run build
 
 The production-ready files will be generated in the `dist/` directory.
 
-### Deployment Platforms
-
-#### Vercel (Recommended)
-```bash
-npm install -g vercel
-vercel
-```
-
-#### Netlify
-```bash
-npm install -g netlify-cli
-netlify deploy --prod
-```
-
 #### GitHub Pages
 See [DEPLOYMENT.md](docs/DEPLOYMENT.md) for detailed instructions.
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-See [DEVELOPMENT.md](docs/DEVELOPMENT.md) for detailed contribution guidelines.
 
 ---
 
@@ -332,36 +246,8 @@ This project is created for educational purposes as part of an internship assign
 
 ## 👤 Author
 
-**Your Name**
+**Mohamed Riyaz Ahamed**
 
 - GitHub: [@yourusername](https://github.com/yourusername)
 - LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
 - Portfolio: [yourportfolio.com](https://yourportfolio.com)
-
----
-
-## 🙏 Acknowledgments
-
-- Design inspiration from modern SaaS platforms
-- Icons by [Lucide](https://lucide.dev/)
-- Fonts by [Google Fonts](https://fonts.google.com/)
-- Animations powered by [Framer Motion](https://www.framer.com/motion/)
-
----
-
-## 📞 Support
-
-If you have any questions or need support, please:
-
-- Open an issue on GitHub
-- Contact via email: your.email@example.com
-
----
-
-<div align="center">
-
-**Built with ❤️ for the Stellar SaaS Platform**
-
-⭐ Star this repository if you found it helpful!
-
-</div>
