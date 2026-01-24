@@ -248,6 +248,6 @@ This project is created for educational purposes as part of an internship assign
 
 **Mohamed Riyaz Ahamed**
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- Portfolio: [yourportfolio.com](https://yourportfolio.com)
+- GitHub: [github.com/riyaz-ahamed-07](https://github.com/riyaz-ahamed-07/)
+- LinkedIn: [www.linkedin.com/in/riyaz7/](https://www.linkedin.com/in/riyaz7/)
+- Portfolio: [riyaz-portfolio-ai](https://riyaz-portfolio-ai.vercel.app/)
