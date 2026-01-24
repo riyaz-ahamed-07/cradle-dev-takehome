@@ -104,7 +104,7 @@ const Hero = () => {
             ></div>
             {/* Bottom Grid Background */}
             <div
-                className="hidden lg:block absolute inset-x-0 top-0 h-[70%] z-0 pointer-events-none opacity-15"
+                className="hidden lg:block absolute inset-x-0 top-0 h-[65%] z-0 pointer-events-none opacity-15"
                 style={{
                     backgroundImage: 'url(/images/grid-bg.png)',
                     backgroundSize: 'cover',
