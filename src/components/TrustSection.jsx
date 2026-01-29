@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Triangle, Send, Activity, Rss } from 'lucide-react';
 import Button from './Button';
 
 const TrustSection = () => {
+    const [isHovered, setIsHovered] = useState(false);
     return (
         <section className="pt-36 pb-36 bg-white font-sans relative overflow-hidden">
 
@@ -11,7 +12,7 @@ const TrustSection = () => {
             <div className="max-w-[1400px] mx-auto px-2 sm:px-4 lg:px-6 text-center relative z-10">
 
                 {/* Headline */}
-                <h2 className="text-[30px] md:text-[36px] font-medium text-secondary tracking-tight mb-20">
+                <h2 className="text-[30px] md:text-[36px] font-[550] text-secondary tracking-tight mb-20">
                     The world's best companies trust Stellar.
                 </h2>
 
@@ -19,16 +20,16 @@ const TrustSection = () => {
                 <div className="relative w-full overflow-hidden mb-24 mask-linear-fade">
                     <motion.div
                         className="flex items-center gap-8 sm:gap-16 whitespace-nowrap"
-                        // moving from -50% to 0% creates a left-to-right motion (if we render 2 sets) 
-                        // Wait, if we want items to move RIGHT, they go from Left -> Right.
-                        // So we start at a negative offset and move to 0.
-                        animate={{ x: ["-50%", "0%"] }}
+                        // Reverse direction: moving from 0% to -50% creates right-to-left motion
+                        animate={{ x: ["0%", "-50%"] }}
                         transition={{
                             repeat: Infinity,
                             ease: "linear",
-                            duration: 30, // Adjust speed
+                            duration: isHovered ? 60 : 20, // Slow down on hover, fast otherwise
                             repeatType: "loop"
                         }}
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
                         drag="x"
                         dragConstraints={{ left: -1000, right: 1000 }} // Allow free dragging
                         whileTap={{ cursor: "grabbing" }}
@@ -43,25 +44,40 @@ const TrustSection = () => {
                                     <img src="/logos/xpeng.png" alt="XPENG" className="h-10 md:h-12 w-auto object-contain" />
                                 </div>
 
+                                {/* Divider */}
+                                <div className="h-8 w-[1px] bg-gray-300"></div>
+
                                 {/* Amplitude */}
                                 <div className="flex items-center opacity-80 hover:opacity-100 transition-opacity">
                                     <img src="/logos/amplitude.png" alt="Amplitude" className="h-10 md:h-12 w-auto object-contain" />
                                 </div>
+
+                                {/* Divider */}
+                                <div className="h-8 w-[1px] bg-gray-300"></div>
 
                                 {/* veroxfloor */}
                                 <div className="flex items-center opacity-80 hover:opacity-100 transition-opacity">
                                     <img src="/logos/veroxfloor.png" alt="veroxfloor" className="h-8 md:h-10 w-auto object-contain" />
                                 </div>
 
+                                {/* Divider */}
+                                <div className="h-8 w-[1px] bg-gray-300"></div>
+
                                 {/* RPUBLICA */}
                                 <div className="flex items-center opacity-80 hover:opacity-100 transition-opacity">
                                     <img src="/logos/rpublica.png" alt="RPUBLICA" className="h-8 md:h-9 w-auto object-contain" />
                                 </div>
 
+                                {/* Divider */}
+                                <div className="h-8 w-[1px] bg-gray-300"></div>
+
                                 {/* Invoice2go */}
                                 <div className="flex items-center opacity-80 hover:opacity-100 transition-opacity">
                                     <img src="/logos/invoice2go.png" alt="Invoice2go" className="h-8 md:h-10 w-auto object-contain" />
                                 </div>
+
+                                {/* Divider */}
+                                <div className="h-8 w-[1px] bg-gray-300"></div>
                             </div>
                         ))}
                     </motion.div>
@@ -75,7 +91,7 @@ const TrustSection = () => {
                 {/* CTA Button */}
                 <Button
                     variant="secondary"
-                    className="rounded-full px-8 py-4 h-auto text-sm font-semibold border-gray-200 hover:border-primary/20 hover:text-primary shadow-sm hover:shadow-md transition-all pt-4"
+                    className="rounded-full px-6 py-4 h-auto text-[16px] font-semibold border-gray-200 hover:border-primary/20 hover:text-primary shadow-sm hover:shadow-md transition-all pt-4"
                 >
                     Start your Stellar Journey
                 </Button>

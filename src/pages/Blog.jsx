@@ -7,23 +7,12 @@ const Blog = () => {
         <div className="min-h-screen bg-gradient-to-b from-indigo-50/30 to-white flex items-center justify-center px-4 relative overflow-hidden">
             {/* Background Grid */}
             <div
-                className="hidden lg:block absolute inset-x-0 bottom-0 h-[100%] z-0 pointer-events-none opacity-15"
+                className="hidden lg:block absolute inset-0 z-0 pointer-events-none opacity-[0.08]"
                 style={{
                     backgroundImage: 'url(/images/grid-bg.png)',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center bottom',
-                    backgroundRepeat: 'no-repeat'
-                }}
-            ></div>
-            {/* Bottom Grid Background */}
-            <div
-                className="hidden lg:block absolute inset-x-0 top-0 h-[70%] z-0 pointer-events-none opacity-15"
-                style={{
-                    backgroundImage: 'url(/images/grid-bg.png)',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center bottom',
-                    backgroundRepeat: 'no-repeat',
-                    transform: 'scaleY(-1)'
+                    backgroundSize: '50%',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'repeat'
                 }}
             ></div>
             <div className="max-w-2xl mx-auto text-center relative z-10">

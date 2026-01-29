@@ -25,42 +25,41 @@ const FeatureCard = ({ title, subtitle, icon: Icon, children }) => (
 const BigFeaturesSection = () => {
     return (
         <section className="py-36 bg-white relative overflow-hidden font-sans">
-            {/* Grid Background */}
-            <div
-                className="hidden lg:block absolute inset-0 z-0 bottom-0 h-[100%] pointer-events-none opacity-20"
-                style={{
-                    backgroundImage: 'url(/images/grid-bg.png)',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center bottom',
-                    backgroundRepeat: 'no-repeat',
-                    maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
-                    WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
-                }}
-            ></div>
-            {/* Grid Background (Inverted) */}
-            <div
-                className="hidden lg:block absolute inset-0 z-0 bottom-0 h-[70%] pointer-events-none opacity-20"
-                style={{
-                    backgroundImage: 'url(/images/grid-bg.png)',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center bottom',
-                    backgroundRepeat: 'no-repeat',
-                    maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
-                    WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
-                    transform: 'scaleY(-1)'
-                }}
-            ></div>
+            {/* Background */}
+            <div className="hidden lg:block absolute top-0 right-0 left-0 h-[100%] z-0 pointer-events-none ">
+                <div className="absolute inset-0 flex flex-col justify-between h-full w-full max-w-[1600px] left-1/2 -translate-x-1/2 bg-[#f7f8fc]">
+                    {/* Top Background */}
+                    <div className="w-full h-[300px] relative overflow-hidden">
+                        <img
+                            src="https://framerusercontent.com/images/YhQ4FuWUijRFzpn7nv26cDPk44.svg"
+                            alt=""
+                            className="absolute inset-0 w-full h-full object-cover"
+                        />
+                    </div>
+                    {/* Bottom Background */}
+                    <div className="w-full h-[300px] relative overflow-hidden">
+                        <img
+                            src="https://framerusercontent.com/images/0pfJ9DHDfLH2ItTurbeHdI534KM.svg"
+                            alt=""
+                            className="absolute inset-0 w-full h-full object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
 
-            <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="max-w-[1240px] mx-auto px-2 sm:px-6 lg:px-6 relative z-10">
 
                 {/* Header */}
                 <div className="text-center mb-20">
-                    <span className="text-sm font-medium text-primary mb-3 block tracking-wide">
+                    <span className="text-[14px] font-[650] text-primary mb-3 block tracking-wide">
                         Powerful Features
                     </span>
-                    <h2 className="text-[32px] sm:text-[44px] md:text-[56px] leading-tight font-medium text-secondary tracking-tight">
+                    <h2 className="text-[44px] sm:text-[58px] md:text-[68px] leading-tight font-[650] text-secondary tracking-tight">
                         Our product has <br />
-                        these big <span className="inline-flex items-center justify-center px-6 sm:px-8 py-1 rounded-full bg-primary text-white font-medium align-middle">features</span>
+                        these big <span className="inline-flex items-center justify-center px-4 sm:px-6 py-1.5 rounded-full text-white font-bold align-middle ring-2 ring-[#6E50DF] relative overflow-hidden">
+                            <img src="https://framerusercontent.com/images/IP8o7LhtzsZ1obCCPHAUFlTJfsU.png" alt="" className="absolute inset-0 w-full h-full object-cover rounded-full" />
+                            <span className="relative z-10">features</span>
+                        </span>
                     </h2>
                 </div>
 
@@ -84,15 +83,15 @@ const BigFeaturesSection = () => {
                             {/* Tabs */}
                             <div className="flex gap-3 mb-4">
                                 <button className="flex items-center gap-1.5 text-[10px] text-primary bg-indigo-50 px-2.5 py-1.5 rounded-md">
-                                    <span className="w-1.5 h-1.5 bg-primary rounded-sm"></span>
+                                    <span className="w-2 h-2 rounded-sm"></span>
                                     Date
                                 </button>
                                 <button className="flex items-center gap-1.5 text-[10px] text-gray-500 px-2.5 py-1.5 rounded-md">
-                                    <span className="w-1.5 h-1.5 bg-blue-400 rounded-sm"></span>
+                                    <span className="w-2 h-2 rounded-sm"></span>
                                     Mail
                                 </button>
                                 <button className="flex items-center gap-1.5 text-[10px] text-gray-500 px-2.5 py-1.5 rounded-md">
-                                    <span className="w-1.5 h-1.5 bg-gray-400 rounded-full"></span>
+                                    <span className="w-2 h-2 rounded-full"></span>
                                     Console
                                 </button>
                             </div>

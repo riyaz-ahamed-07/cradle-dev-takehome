@@ -45,27 +45,12 @@ const Pricing = () => {
         <div className="relative pt-32 pb-20 px-4 bg-gradient-to-b from-gray-50 to-white font-sans overflow-hidden">
             {/* Grid Background */}
             <div
-                className="hidden lg:block absolute inset-0 z-0 bottom-0 h-[100%] pointer-events-none opacity-20"
+                className="hidden lg:block absolute inset-0 z-0 pointer-events-none opacity-[0.08]"
                 style={{
                     backgroundImage: 'url(/images/grid-bg.png)',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center bottom',
-                    backgroundRepeat: 'no-repeat',
-                    maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
-                    WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
-                }}
-            ></div>
-            {/* Grid Background (Inverted) */}
-            <div
-                className="hidden lg:block absolute inset-0 z-0 bottom-0 h-[70%] pointer-events-none opacity-20"
-                style={{
-                    backgroundImage: 'url(/images/grid-bg.png)',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center bottom',
-                    backgroundRepeat: 'no-repeat',
-                    maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
-                    WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
-                    transform: 'scaleY(-1)'
+                    backgroundSize: '50%',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'repeat'
                 }}
             ></div>
 

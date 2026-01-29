@@ -5,25 +5,27 @@ import Button from './Button';
 const CTASection = () => {
     return (
         <section className="py-36 bg-white font-sans relative overflow-hidden">
-            <div
-                className="hidden lg:block absolute inset-x-0 bottom-0 h-[50%] z-0 pointer-events-none opacity-15"
-                style={{
-                    backgroundImage: 'url(/images/grid-bg.png)',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center center',
-                    backgroundRepeat: 'no-repeat'
-                }}
-            ></div>
-            <div
-                className="hidden lg:block absolute inset-x-0 top-0 h-[50%] z-0 pointer-events-none opacity-15"
-                style={{
-                    backgroundImage: 'url(/images/grid-bg.png)',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center center',
-                    backgroundRepeat: 'no-repeat',
-                    transform: 'scaleY(-1)'
-                }}
-            ></div>
+            {/* Background */}
+            <div className="hidden lg:block absolute top-0 right-0 left-0 h-[100%] z-0 pointer-events-none ">
+                <div className="absolute inset-0 flex flex-col justify-between h-full w-full max-w-[1600px] left-1/2 -translate-x-1/2 bg-[#f7f8fc]">
+                    {/* Top Background */}
+                    <div className="w-full h-[200px] relative overflow-hidden">
+                        <img
+                            src="https://framerusercontent.com/images/YhQ4FuWUijRFzpn7nv26cDPk44.svg"
+                            alt=""
+                            className="absolute inset-0 w-full h-full object-cover"
+                        />
+                    </div>
+                    {/* Bottom Background */}
+                    <div className="w-full h-[300px] relative overflow-hidden">
+                        <img
+                            src="https://framerusercontent.com/images/0pfJ9DHDfLH2ItTurbeHdI534KM.svg"
+                            alt=""
+                            className="absolute inset-0 w-full h-full object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
 
             <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -57,16 +59,17 @@ const CTASection = () => {
 
                         <div className="flex flex-wrap gap-6 items-center">
                             <div className="flex items-center gap-2">
-                                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
-                                    <Check size={14} className="text-primary" strokeWidth={3} />
-                                </div>
+                                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-primary flex items-center justify-center">
+                                        <Check size={16} className="text-white stroke-[3]" />
+                                    </div>
                                 <span className="text-secondary text-sm">Free 7-day trial</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
-                                    <Check size={14} className="text-primary" strokeWidth={3} />
-                                </div>
-                                <span className="text-secondary text-sm">No credit card required</span>
+                                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-primary flex items-center justify-center">
+                                        <Check size={16} className="text-white stroke-[3]" />
+                                    </div></div>
+                                <span className="text-secondary text-[16px]">No credit card required</span>
                             </div>
                         </div>
                     </div>
