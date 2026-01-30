@@ -43,18 +43,30 @@ const Pricing = () => {
 
     return (
         <div className="relative pt-32 pb-20 px-4 bg-gradient-to-b from-gray-50 to-white font-sans overflow-hidden">
-            {/* Grid Background */}
-            <div
-                className="hidden lg:block absolute inset-0 z-0 pointer-events-none opacity-[0.08]"
-                style={{
-                    backgroundImage: 'url(/images/grid-bg.png)',
-                    backgroundSize: '50%',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'repeat'
-                }}
-            ></div>
+            {/* Background */}
+            <div className="absolute top-0 right-0 left-0 h-[80%] z-0 pointer-events-none ">
+                <div className="absolute inset-0 flex flex-col justify-between h-full w-full max-w-[1600px] left-1/2 -translate-x-1/2 bg-[#f7f8fc]">
+                    {/* Top Background */}
+                    <div className="w-full h-[300px] relative overflow-hidden">
+                        <img
+                            src="https://framerusercontent.com/images/YhQ4FuWUijRFzpn7nv26cDPk44.svg"
+                            alt=""
+                            className="absolute inset-0 w-full h-full object-cover"
+                        />
+                    </div>
+                    {/* Bottom Background */}
+                    <div className="w-full h-[300px] relative overflow-hidden">
+                        <img
+                            src="https://framerusercontent.com/images/0pfJ9DHDfLH2ItTurbeHdI534KM.svg"
+                            alt=""
+                            className="absolute inset-0 w-full h-full object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
 
-            <div className="max-w-7xl mx-auto relative z-10">
+
+            <div className="max-w-7xl mt-20 mx-auto relative z-10">
                 {/* Header */}
                 <div className="text-center mb-16">
                     <p className="text-primary font-semibold text-sm mb-4">Our Pricing</p>
