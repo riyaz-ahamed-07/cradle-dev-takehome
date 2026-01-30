@@ -2,20 +2,20 @@ import React from 'react';
 import { Sliders, Zap, Layout, Cloud, Filter, MoreVertical } from 'lucide-react';
 
 const FeatureCard = ({ title, subtitle, icon: Icon, children }) => (
-    <div className="bg-white rounded-2xl p-6 border border-gray-200/40 shadow-[0px_4px_20px_-4px_rgba(0,0,0,0.08)] hover:shadow-[0px_8px_30px_-4px_rgba(0,0,0,0.12)] transition-shadow duration-300 flex flex-col h-full">
+    <div className="bg-white rounded-2xl p-4 sm:p-5 md:p-6 border border-gray-200/40 shadow-[0px_4px_20px_-4px_rgba(0,0,0,0.08)] hover:shadow-[0px_8px_30px_-4px_rgba(0,0,0,0.12)] transition-shadow duration-300 flex flex-col h-full">
         {/* Visual Content Placeholder */}
-        <div className="bg-[#FAFAFA] rounded-xl w-full h-40 sm:h-52 mb-6 overflow-hidden relative p-3 sm:p-5 border border-gray-100/60">
+        <div className="bg-[#FAFAFA] rounded-xl w-full h-32 sm:h-40 md:h-52 mb-4 sm:mb-5 md:mb-6 overflow-hidden relative p-2 sm:p-3 md:p-5 border border-gray-100/60">
             {children}
         </div>
 
         <div className="mt-auto">
-            <div className="flex items-center gap-3 mb-3">
-                <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-                    <Icon size={18} strokeWidth={2.5} />
+            <div className="flex items-center gap-2 sm:gap-2.5 md:gap-3 mb-2 sm:mb-2.5 md:mb-3">
+                <div className="w-8 h-8 md:w-9 md:h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                    <Icon size={16} className="md:w-[18px] md:h-[18px]" strokeWidth={2.5} />
                 </div>
-                <h3 className="font-bold text-[17px] text-secondary">{title}</h3>
+                <h3 className="font-bold text-[15px] md:text-[17px] text-secondary">{title}</h3>
             </div>
-            <p className="text-secondary-gray text-[14px] leading-relaxed">
+            <p className="text-secondary-gray text-[13px] md:text-[14px] leading-relaxed">
                 {subtitle}
             </p>
         </div>
@@ -24,10 +24,10 @@ const FeatureCard = ({ title, subtitle, icon: Icon, children }) => (
 
 const BigFeaturesSection = () => {
     return (
-        <section className="py-36 bg-white relative overflow-hidden font-sans">
+        <section className="py-16 sm:py-20 md:py-28 lg:py-36 bg-white relative overflow-hidden font-sans">
             {/* Background */}
-            <div className="hidden lg:block absolute top-0 right-0 left-0 h-[100%] z-0 pointer-events-none ">
-                <div className="absolute inset-0 flex flex-col justify-between h-full w-full max-w-[1600px] left-1/2 -translate-x-1/2 bg-[#f7f8fc]">
+            <div className="absolute top-0 right-0 left-0 h-[100%] z-0 pointer-events-none overflow-hidden">
+                <div className="absolute inset-0 flex flex-col justify-between h-full w-screen max-w-[1600px] left-1/2 -translate-x-1/2 bg-[#f7f8fc]">
                     {/* Top Background */}
                     <div className="w-full h-[300px] relative overflow-hidden">
                         <img
@@ -47,16 +47,16 @@ const BigFeaturesSection = () => {
                 </div>
             </div>
 
-            <div className="max-w-[1240px] mx-auto px-2 sm:px-6 lg:px-6 relative z-10">
+            <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8 lg:px-6 relative z-10">
 
                 {/* Header */}
-                <div className="text-center mb-20">
-                    <span className="text-[14px] font-[650] text-primary mb-3 block tracking-wide">
+                <div className="text-center mb-12 sm:mb-14 md:mb-16 lg:mb-20">
+                    <span className="text-[12px] sm:text-[13px] md:text-[14px] font-[650] text-primary mb-3 block tracking-wide">
                         Powerful Features
                     </span>
-                    <h2 className="text-[44px] sm:text-[58px] md:text-[68px] leading-tight font-[650] text-secondary tracking-tight">
+                    <h2 className="text-[32px] sm:text-[44px] md:text-[58px] lg:text-[68px] leading-tight font-[650] text-secondary tracking-tight">
                         Our product has <br />
-                        these big <span className="inline-flex items-center justify-center px-4 sm:px-6 py-1.5 rounded-full text-white font-bold align-middle ring-2 ring-[#6E50DF] relative overflow-hidden">
+                        these big <span className="inline-flex items-center justify-center px-3 sm:px-4 md:px-6 py-1 sm:py-1.5 rounded-full text-white font-bold align-middle ring-2 ring-[#6E50DF] relative overflow-hidden">
                             <img src="https://framerusercontent.com/images/IP8o7LhtzsZ1obCCPHAUFlTJfsU.png" alt="" className="absolute inset-0 w-full h-full object-cover rounded-full" />
                             <span className="relative z-10">features</span>
                         </span>
@@ -64,7 +64,7 @@ const BigFeaturesSection = () => {
                 </div>
 
                 {/* Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 md:max-w-2xl md:mx-auto lg:max-w-none">
 
                     {/* Card 1 - Dashboard */}
                     <FeatureCard
@@ -75,13 +75,13 @@ const BigFeaturesSection = () => {
                         {/* Dashboard Mockup */}
                         <div className="w-full h-full flex flex-col">
                             {/* Header */}
-                            <div className="flex items-center justify-between mb-4">
-                                <h4 className="text-[13px] font-semibold text-secondary">Dashboard</h4>
-                                <MoreVertical size={14} className="text-gray-400" />
+                            <div className="flex items-center justify-between mb-3 sm:mb-4">
+                                <h4 className="text-[11px] sm:text-[13px] font-semibold text-secondary">Dashboard</h4>
+                                <MoreVertical size={12} className="sm:w-[14px] sm:h-[14px] text-gray-400" />
                             </div>
 
                             {/* Tabs */}
-                            <div className="flex gap-3 mb-4">
+                            <div className="flex gap-2 sm:gap-3 mb-3 sm:mb-4">
                                 <button className="flex items-center gap-1.5 text-[10px] text-primary bg-indigo-50 px-2.5 py-1.5 rounded-md">
                                     <span className="w-2 h-2 rounded-sm"></span>
                                     Date
@@ -97,12 +97,12 @@ const BigFeaturesSection = () => {
                             </div>
 
                             {/* Import CSV Box */}
-                            <div className="bg-gray-50 rounded-lg p-3 border border-gray-100 relative">
+                            <div className="bg-gray-50 rounded-lg p-2 sm:p-3 border border-gray-100 relative">
                                 <button className="absolute top-2 right-2 text-gray-300 hover:text-gray-500">
                                     <span className="text-xs">×</span>
                                 </button>
-                                <div className="text-[11px] font-semibold text-secondary mb-1">Import CSV</div>
-                                <div className="text-[9px] text-gray-400">Lorem ipsum dolor sit amet, conse...</div>
+                                <div className="text-[10px] sm:text-[11px] font-semibold text-secondary mb-1">Import CSV</div>
+                                <div className="text-[8px] sm:text-[9px] text-gray-400">Lorem ipsum dolor sit amet, conse...</div>
                             </div>
                         </div>
                     </FeatureCard>
@@ -116,19 +116,19 @@ const BigFeaturesSection = () => {
                         {/* Stellar Filters Mockup */}
                         <div className="w-full h-full flex flex-col">
                             {/* Header */}
-                            <div className="flex items-center justify-between mb-6">
-                                <h4 className="text-[13px] font-semibold text-secondary">Stellar Filters;</h4>
-                                <MoreVertical size={14} className="text-gray-400" />
+                            <div className="flex items-center justify-between mb-4 sm:mb-6">
+                                <h4 className="text-[11px] sm:text-[13px] font-semibold text-secondary">Stellar Filters;</h4>
+                                <MoreVertical size={12} className="sm:w-[14px] sm:h-[14px] text-gray-400" />
                             </div>
 
                             {/* Icons with connecting line */}
-                            <div className="flex items-center justify-center gap-8 mt-8">
-                                <div className="w-16 h-16 rounded-full border-2 border-primary/30 flex items-center justify-center bg-white">
-                                    <img src="/logos/stellar-logo.png" alt="Stellar" className="w-8 h-8" />
+                            <div className="flex items-center justify-center gap-4 sm:gap-6 md:gap-8 mt-4 sm:mt-6 md:mt-8">
+                                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full border-2 border-primary/30 flex items-center justify-center bg-white">
+                                    <img src="/logos/stellar-logo.png" alt="Stellar" className="w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8" />
                                 </div>
-                                <div className="h-[2px] w-20 bg-primary/20"></div>
-                                <div className="w-16 h-16 rounded-full border-2 border-primary/30 flex items-center justify-center bg-white">
-                                    <Filter size={24} className="text-primary" strokeWidth={2} />
+                                <div className="h-[2px] w-12 sm:w-16 md:w-20 bg-primary/20"></div>
+                                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full border-2 border-primary/30 flex items-center justify-center bg-white">
+                                    <Filter size={18} className="sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px] text-primary" strokeWidth={2} />
                                 </div>
                             </div>
                         </div>
@@ -143,15 +143,15 @@ const BigFeaturesSection = () => {
                         {/* Analytics Mockup */}
                         <div className="w-full h-full flex flex-col">
                             {/* Header */}
-                            <div className="flex items-center justify-between mb-6">
-                                <h4 className="text-[13px] font-semibold text-secondary">Proje Data & Analytics</h4>
-                                <MoreVertical size={14} className="text-gray-400" />
+                            <div className="flex items-center justify-between mb-4 sm:mb-6">
+                                <h4 className="text-[11px] sm:text-[13px] font-semibold text-secondary">Proje Data & Analytics</h4>
+                                <MoreVertical size={12} className="sm:w-[14px] sm:h-[14px] text-gray-400" />
                             </div>
 
                             {/* Progress Bars */}
-                            <div className="space-y-4 mt-4">
+                            <div className="space-y-3 sm:space-y-4 mt-3 sm:mt-4">
                                 <div>
-                                    <div className="flex justify-between text-[11px] mb-2">
+                                    <div className="flex justify-between text-[10px] sm:text-[11px] mb-1.5 sm:mb-2">
                                         <span className="text-gray-500">Sector</span>
                                         <span className="text-secondary font-medium">96%</span>
                                     </div>

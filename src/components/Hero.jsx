@@ -100,8 +100,8 @@ const Hero = () => {
     return (
         <section className="relative pt-32 pb-20 overflow-hidden bg-white">
             {/* Background */}
-            <div className="hidden lg:block absolute top-0 right-0 left-0 h-[80%] z-0 pointer-events-none ">
-                <div className="absolute inset-0 flex flex-col justify-between h-full w-full max-w-[1600px] left-1/2 -translate-x-1/2 bg-[#f7f8fc]">
+            <div className="absolute top-0 right-0 left-0 h-[80%] z-0 pointer-events-none overflow-hidden">
+                <div className="absolute inset-0 flex flex-col justify-between h-full w-screen max-w-[1600px] left-1/2 -translate-x-1/2 bg-[#f7f8fc]">
                     {/* Top Background */}
                     <div className="w-full h-[300px] relative overflow-hidden">
                         <img
