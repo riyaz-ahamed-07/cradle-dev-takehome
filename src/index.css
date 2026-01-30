@@ -8,6 +8,11 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
   }
+  
+  body {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 }
 
 @layer utilities {
