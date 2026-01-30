@@ -31,7 +31,7 @@ const SolutionSection = () => {
                             you more customers.
                         </h2>
 
-                        <div className="grid sm:grid-cols-2 gap-x-6 gap-y-8 sm:gap-x-8 sm:gap-y-12">
+                        <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:gap-x-8 sm:gap-y-12">
                             <SolutionFeature
                                 iconUrl="https://framerusercontent.com/images/OsvUbZnNIMOjzwZUq6703omObM.svg"
                                 title="Deploy faster together"

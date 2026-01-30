@@ -43,7 +43,7 @@ const CTASection = () => {
 
                     {/* Right Side - Form Elements */}
                     <div className="w-full">
-                        <div className="flex flex-col sm:flex-row gap-3 mb-4 sm:mb-5 md:mb-6">
+                        <div className="flex flex-row gap-3 mb-4 sm:mb-5 md:mb-6">
                             <input
                                 type="email"
                                 placeholder="name@email.com"
@@ -51,7 +51,7 @@ const CTASection = () => {
                             />
                             <Button
                                 variant="primary"
-                                className="rounded-full px-6 py-3 sm:px-8 sm:py-4 h-auto text-sm font-semibold whitespace-nowrap w-full sm:w-auto text-center justify-center"
+                                className="rounded-full px-6 py-3 sm:px-8 sm:py-4 h-auto text-sm font-semibold whitespace-nowrap flex-shrink-0 text-center justify-center"
                             >
                                 Get Instant Access
                             </Button>

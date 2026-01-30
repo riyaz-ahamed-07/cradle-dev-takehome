@@ -65,7 +65,7 @@ const FeaturesSection = () => {
                                 {/* Cloud Logo Icon - Bottom Left - positioned relative to circle */}
                                 <div className="absolute bottom-[12%] sm:bottom-[10px] md:bottom-[4%] lg:bottom-[5%] left-[15%] sm:left-[-5%] md:left-[-5%] lg:left-[-5%] bg-white/90 backdrop-blur-xl border border-white/20 shadow-[0px_20px_40px_-10px_rgba(0,0,0,0.08)] rounded-full p-[3px] w-[22%] sm:w-24 md:w-26 lg:w-28 aspect-square z-20 animate-float-slow">
                                     <div className="bg-white/50 rounded-full ring-2 ring-inset ring-gray-200 p-[2px] w-full h-full flex items-center justify-center">
-                                        <img src="/logos/cloud-logo.png" alt="Stellar Cloud" className="w-[60%] lg:w-16 h-auto" />
+                                        <img src="/logos/cloud-logo.png" alt="Stellar Cloud" className="w-14 sm:w-16 h-auto object-contain" />
                                     </div>
                                 </div>
 

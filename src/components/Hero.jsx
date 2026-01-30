@@ -131,7 +131,7 @@ const Hero = () => {
                 {/* Headline */}
                 <h1 className="max-w-4xl mx-auto text-[40px] sm:text-[54px] md:text-[70px] leading-[1.1] md:leading-[1.15] font-semibold text-secondary tracking-tight mb-6 animate-fade-in-up delay-100">
                     Save time and build <br />
-                    better with <span className="inline-flex items-center scale-125 justify-center px-4 py-2 sm:px-4 sm:py-2 rounded-full text-white text-[56px] sm:text-[56px] md:text-[56px] font-bold align-middle shadow-xl shadow-[#7C5CFC]/25 relative overflow-hidden ml-6">
+                    better with <span className="inline-flex items-center scale-100 sm:scale-110 md:scale-125 justify-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-white text-[32px] sm:text-[44px] md:text-[56px] font-bold align-middle shadow-xl shadow-[#7C5CFC]/25 relative overflow-hidden ml-3 sm:ml-4 md:ml-6">
                         <img
                             src="https://framerusercontent.com/images/IP8o7LhtzsZ1obCCPHAUFlTJfsU.png"
                             alt=""
