@@ -98,9 +98,9 @@ const StatsCard = () => (
 
 const Hero = () => {
     return (
-        <section className="relative pt-20 lg:pt-32 pb-20 overflow-hidden bg-white">
+        <section className="relative pt-32 pb-20 overflow-hidden bg-white">
             {/* Background */}
-            <div className="absolute top-0 right-0 left-0 h-[80%] z-0 pointer-events-none ">
+            <div className="hidden lg:block absolute top-0 right-0 left-0 h-[80%] z-0 pointer-events-none ">
                 <div className="absolute inset-0 flex flex-col justify-between h-full w-full max-w-[1600px] left-1/2 -translate-x-1/2 bg-[#f7f8fc]">
                     {/* Top Background */}
                     <div className="w-full h-[300px] relative overflow-hidden">
@@ -131,7 +131,7 @@ const Hero = () => {
                 {/* Headline */}
                 <h1 className="max-w-4xl mx-auto text-[40px] sm:text-[54px] md:text-[70px] leading-[1.1] md:leading-[1.15] font-semibold text-secondary tracking-tight mb-6 animate-fade-in-up delay-100">
                     Save time and build <br />
-                    better with <span className="inline-flex items-center scale-125 justify-center px-4 py-2 sm:px-4 sm:py-2 rounded-full text-white text-[32px] sm:text-[56px] font-bold align-middle shadow-xl shadow-[#7C5CFC]/25 relative overflow-hidden ml-6">
+                    better with <span className="inline-flex items-center scale-125 justify-center px-4 py-2 sm:px-4 sm:py-2 rounded-full text-white text-[56px] sm:text-[56px] md:text-[56px] font-bold align-middle shadow-xl shadow-[#7C5CFC]/25 relative overflow-hidden ml-6">
                         <img
                             src="https://framerusercontent.com/images/IP8o7LhtzsZ1obCCPHAUFlTJfsU.png"
                             alt=""
@@ -159,7 +159,7 @@ const Hero = () => {
                     </div>
 
                     {/* Phone Container with overflow to cut bottom - cropped 15% */}
-                    <div className="relative z-10 mx-auto h-[280px] sm:h-[350px] overflow-hidden">
+                    <div className="relative z-10 mx-auto  h-[350px] sm:h-[350px] overflow-hidden">
                         {/* Phone Image */}
                         <img
                             src="https://framerusercontent.com/images/nnEGqse817BNZeNu4Ixy2AjThmY.png?scale-down-to=1024"
